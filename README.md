@@ -2,26 +2,32 @@
 
 > All docker image for PicoSix
 
-# Nginx Proxy
+## Nginx Proxy
 
 ```shell
 $ docker build --force-rm -t picosix/nginx-proxy $(pwd)/nginx-proxy
 ```
 
-# Nginx
+## Nginx
 
 ```shell
 $ docker build --force-rm -t picosix/nginx $(pwd)/nginx
 ```
 
-# Node
+## Node
 
 ```shell
 $ docker build --force-rm -t picosix/node $(pwd)/node
 ```
 
-# Node Alpine
+## Node Alpine
 
 ```shell
 $ docker build --force-rm -t picosix/node-alpine $(pwd)/node-alpine
+```
+
+## Mariadb
+
+```shell
+$ docker build --force-rm -t picosix/mariadb $(pwd)/mariadb
 ```
