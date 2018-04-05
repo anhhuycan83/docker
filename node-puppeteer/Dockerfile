@@ -22,8 +22,6 @@ RUN yarn global add puppeteer@1.2.0 && yarn cache clean
 
 ENV NODE_PATH="/usr/local/share/.config/yarn/global/node_modules:${NODE_PATH}"
 
-RUN chmod +x /tools/* && mkdir /screenshots
-
 WORKDIR /app
 
 # Add user so we don't need --no-sandbox.
