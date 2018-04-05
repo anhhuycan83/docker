@@ -20,6 +20,12 @@ $ docker build --force-rm -t picosix/nginx $(pwd)/nginx
 $ docker build --force-rm -t picosix/node $(pwd)/node
 ```
 
+## Node Puppeteer
+
+```shell
+$ docker build --force-rm -t picosix/node-puppeteer $(pwd)/node-puppeteer
+```
+
 ## Node Alpine
 
 ```shell
