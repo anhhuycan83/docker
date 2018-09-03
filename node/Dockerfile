@@ -7,6 +7,6 @@ WORKDIR /app
 ENV TZ=Asia/Ho_Chi_Minh
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-EXPOSE 9999
-EXPOSE 9998
-EXPOSE 9997
+EXPOSE 9001
+EXPOSE 9002
+EXPOSE 9003
