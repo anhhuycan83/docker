@@ -34,5 +34,6 @@ services:
       - elasticsearch
 
 networks:
-  elk:
-    driver: bridge
+  default:
+    external:
+      name: minecraft
