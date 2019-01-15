@@ -1,0 +1,63 @@
+# Entrypoints to be used by frontends that do not specify any entrypoint.
+# Each frontend can specify its own entrypoints.
+#
+# Optional
+# Default: ["http"]
+#
+defaultEntryPoints = ["http", "https"]
+
+logLevel = "INFO"
+
+[traefikLog]
+  filePath = "/logs/traefik.log"
+  format   = "json"
+
+[accessLog]
+  filePath = "/logs/access.log"
+  format = "json"
+  bufferingSize = 100
+
+# Entrypoints definition
+#
+# Default:
+# [entryPoints]
+#   [entryPoints.http]
+#   address = ":80"
+#
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+  [entryPoints.https]
+  address = ":443"
+  [entryPoints.traefik]
+  address=":8080"
+   [entryPoints.traefik.auth]
+     [entryPoints.traefik.auth.basic]
+       users = [
+         "devteam:$apr1$Q6rzkLE6$ylCFGFhv78QbJvSkBOgv71",
+       ]
+
+# API definition
+# Warning: Enabling API will expose Traefik's configuration.
+# It is not recommended in production,
+# unless secured by authentication and authorizations
+[api]
+  # Name of the related entry point
+  #
+  # Optional
+  # Default: "traefik"
+  #
+  entryPoint = "traefik"
+
+################################################################
+# Docker Provider
+################################################################
+
+# Enable Docker Provider.
+[docker]
+
+# Docker server endpoint. Can be a tcp or a unix socket endpoint.
+#
+# Required
+#
+endpoint = "unix:///var/run/docker.sock"
