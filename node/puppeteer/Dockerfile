@@ -1,4 +1,4 @@
-FROM minecraft/node:8
+FROM picosix/node:8
 
 # See https://crbug.com/795759
 RUN apt-get update && apt-get install -yq libgconf-2-4
