@@ -34,7 +34,7 @@ logLevel = "INFO"
    [entryPoints.traefik.auth]
      [entryPoints.traefik.auth.basic]
        users = [
-         "devteam:$apr1$Q6rzkLE6$ylCFGFhv78QbJvSkBOgv71",
+         "devteam:$apr1$LxOo8LvM$C2xQaUQj67I7Xg0PYYJrs1",
        ]
 
 # API definition
