@@ -5,6 +5,7 @@ services:
     image: traefik # The official Traefik docker image
     labels:
       - "traefik.frontend.rule=Host:$DOCKER_VIRTUAL_HOST"
+      - "traefik.port=$DOCKER_VIRTUAL_PORT"
     command: --api --docker # Enables the web UI and tells Traefik to listen to docker
     ports:
       - "80:80"     # The HTTP port
