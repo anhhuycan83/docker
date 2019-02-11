@@ -1,0 +1,8 @@
+FROM node:10
+
+RUN mkdir /app
+WORKDIR /app
+
+EXPOSE 9001
+EXPOSE 9002
+EXPOSE 9003

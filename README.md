@@ -60,8 +60,16 @@ docker build --force-rm -t picosix/nginx-proxy $(pwd)/nginx/proxy
 
 ## Node
 
+## Version 8
+
 ```shell
 docker build --force-rm -t picosix/node:8 $(pwd)/node/8
+```
+
+## Version 10
+
+```shell
+docker build --force-rm -t picosix/node:10 $(pwd)/node/10
 ```
 
 ## Node Puppeteer
